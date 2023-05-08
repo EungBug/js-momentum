@@ -2,6 +2,7 @@ const mainSection = document.querySelector('main');
 const loginForm = document.getElementById('login-form');
 const loginInput = loginForm.querySelector('input');
 const greeting = document.getElementById('greeting');
+const desktop = document.querySelector('.desktop');
 
 // 단순하게 stirng 값만 가지고 있는 변수는 변수명을 대문자로 작성해도 무관
 const HIDDEN_CLASSNAME = 'hidden';
@@ -26,6 +27,7 @@ function paintGreetings(username) {
 function hiddenLoginForm() {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   mainSection.classList.remove(LOGIN_CLASSNAME);
+  desktop.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAEM_KEY);
