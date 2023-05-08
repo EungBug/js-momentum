@@ -8,6 +8,8 @@ function paintToDo(newTodo) {
   li.appendChild(span);
 
   span.innerText = newTodo;
+
+  todoList.appendChild(li);
 }
 
 function handleToDoSubmit(event) {

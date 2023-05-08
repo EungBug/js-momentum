@@ -4,24 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Momentum</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input required maxlength="15" type="text" placeholder="What is your name?" />
-      <button>Log In</button>
-    </form>
+    <header>
+      <img src="/img/ico-apple-logo.svg" alt="Apple" class="status__logo" />
+      <div class="status__menu">
+        <span>Finder</span>
+        <h1 id="greeting" class="hidden"></h1>
+        <h2 id="clock"></h2>
+      </div>
+    </header>
 
-    <h2 id="clock"></h2>
-    <h1 id="greeting" class="hidden"></h1>
+    <main class="login">
+      <form id="login-form" class="hidden">
+        <div class="login__profile"></div>
+        <input required maxlength="15" type="text" placeholder="Enter Your Name" />
+      </form>
 
-    <form id="todo-form"><input type="text" placeholder="Write a To Do and Press Enter"</form>
+      <form id="todo-form" class="hidden"><input type="text" placeholder="Write a To Do and Press Enter" /></form>
+      <ul id="todo-list"></ul>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
+      <div id="quote" class="hidden">
+        <span></span>
+        <span></span>
+      </div>
+    </main>
 
     <script src="/js/app.js"></script>
     <script src="/js/clock.js"></script>

@@ -1,3 +1,90 @@
-.hidden {
-  display: none;
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+.hidden {
+  display: none !important;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px);
+  color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+  padding: 0px 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 16.11px;
+}
+header .status__logo {
+  width: 15px;
+  height: 19px;
+  padding: 1px 9px 4px;
+}
+header .status__menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main.login {
+  backdrop-filter: blur(4px);
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#login-form .login__profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url("../img/ico-finder.svg");
+  background-position: center;
+  background-size: 130%;
+}
+#login-form input {
+  width: 162px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 4px 12px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  line-height: 14.32px;
+  outline: none;
+  border: none;
+}
+#login-form input:placeholder {
+  color: rgb(223, 222, 223);
+}
+
+/*# sourceMappingURL=style.css.map */
