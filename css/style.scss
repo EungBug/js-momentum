@@ -33,6 +33,55 @@ $color-green: #61c554;
   background-color: $color-green;
 }
 
+@mixin title-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+  height: 28px;
+  background-color: $color-titlebar;
+  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.15), inset 0px -0.5px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px 10px 0px 0px;
+  color: $color-title-font;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.51px;
+
+  .title-bar__btns {
+    flex-shrink: 0;
+    display: flex;
+    gap: 8px;
+
+    .btns__btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+
+  .title-bar__title {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-align: center;
+  }
+}
+
+@mixin widget-box {
+  background-color: $color-titlebar;
+  color: $color-white;
+  border-radius: 21px;
+  padding: 20px;
+  @include shadow;
+}
+
+@mixin shadow {
+  box-shadow: 0 2px 16px 0 rgb(0, 0, 0, 0.2);
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -74,8 +123,14 @@ header {
     justify-content: space-between;
     padding-top: 3px;
 
-    span {
+    ul {
       min-width: 160px;
+      display: flex;
+      gap: 20px;
+
+      li {
+        cursor: pointer;
+      }
     }
 
     #greeting {
@@ -147,6 +202,7 @@ main {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  @include shadow;
 
   // Input
   #todo-form {
@@ -176,40 +232,7 @@ main {
 }
 
 .title-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  width: 100%;
-  height: 28px;
-  background-color: $color-titlebar;
-  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.15), inset 0px -0.5px 0px rgba(0, 0, 0, 0.05);
-  border-radius: 10px 10px 0px 0px;
-  color: $color-title-font;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 15.51px;
-
-  .title-bar__btns {
-    flex-shrink: 0;
-    display: flex;
-    gap: 8px;
-
-    .btns__btn {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-  }
-
-  .title-bar__title {
-    position: absolute;
-    top: 6px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    text-align: center;
-  }
+  @include title-bar;
 }
 
 .widget {
@@ -226,12 +249,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: $color-titlebar;
-    color: $color-white;
     width: 300px;
     height: 125px;
-    border-radius: 21px;
-    padding: 20px;
+    @include widget-box;
 
     span {
       &:first-child {
@@ -254,7 +274,6 @@ footer {
 
   nav {
     min-width: 300px;
-    height: 92px;
     background-color: rgba(0, 0, 0, 0.2);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(25px);
@@ -262,7 +281,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 4px 8px;
     margin: 0 auto;
 
     ul {
@@ -273,13 +292,17 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 3px;
-        width: 76px;
-        height: 76px;
+        width: 66px;
+        height: 66px;
+        transition: 0.4s;
+        &:hover {
+          transform: scale(1.1);
+        }
 
         a {
           display: block;
-          width: 76px;
-          height: 76px;
+          width: 66px;
+          height: 66px;
         }
 
         img {
@@ -290,7 +313,7 @@ footer {
           &.git,
           &.blog {
             padding: 7px;
-            border-radius: 21px;
+            border-radius: 18px;
             overflow: hidden;
           }
         }
@@ -305,14 +328,14 @@ footer {
 
       .line {
         width: 1px;
-        height: 64px;
+        height: 54px;
         background: rgba(255, 255, 255, 0.3);
         margin-right: 16px;
       }
 
       img {
-        width: 62px;
-        height: 62px;
+        width: 52px;
+        height: 52px;
       }
     }
   }

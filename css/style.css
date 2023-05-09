@@ -59,8 +59,13 @@ header .status__menu {
   justify-content: space-between;
   padding-top: 3px;
 }
-header .status__menu span {
+header .status__menu ul {
   min-width: 160px;
+  display: flex;
+  gap: 20px;
+}
+header .status__menu ul li {
+  cursor: pointer;
 }
 header .status__menu #greeting {
   flex-grow: 1;
@@ -125,6 +130,7 @@ main.login {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .todo #todo-form {
   padding: 10px 10px;
@@ -195,12 +201,13 @@ main.login {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #1e1e1e;
-  color: #fff;
   width: 300px;
   height: 125px;
+  background-color: #1e1e1e;
+  color: #fff;
   border-radius: 21px;
   padding: 20px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .widget #quote span:first-child {
   font-size: 14px;
@@ -217,7 +224,6 @@ footer {
 }
 footer nav {
   min-width: 300px;
-  height: 92px;
   background-color: rgba(0, 0, 0, 0.2);
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(25px);
@@ -225,7 +231,7 @@ footer nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: 4px 8px;
   margin: 0 auto;
 }
 footer nav ul {
@@ -236,13 +242,17 @@ footer nav ul li {
   justify-content: center;
   align-items: center;
   gap: 3px;
-  width: 76px;
-  height: 76px;
+  width: 66px;
+  height: 66px;
+  transition: 0.4s;
+}
+footer nav ul li:hover {
+  transform: scale(1.1);
 }
 footer nav ul li a {
   display: block;
-  width: 76px;
-  height: 76px;
+  width: 66px;
+  height: 66px;
 }
 footer nav ul li img {
   width: 100%;
@@ -250,7 +260,7 @@ footer nav ul li img {
 }
 footer nav ul li img.naver, footer nav ul li img.git, footer nav ul li img.blog {
   padding: 7px;
-  border-radius: 21px;
+  border-radius: 18px;
   overflow: hidden;
 }
 footer nav .trash {
@@ -261,13 +271,13 @@ footer nav .trash {
 }
 footer nav .trash .line {
   width: 1px;
-  height: 64px;
+  height: 54px;
   background: rgba(255, 255, 255, 0.3);
   margin-right: 16px;
 }
 footer nav .trash img {
-  width: 62px;
-  height: 62px;
+  width: 52px;
+  height: 52px;
 }
 
 /*# sourceMappingURL=style.css.map */

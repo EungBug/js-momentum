@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Momentum</title>
+    <link rel="shortcut icon" href="/img/ico-apple-logo.svg" type="image/x-icon" />
   </head>
   <body>
     <header>
       <img src="/img/ico-apple-logo.svg" alt="Apple" class="status__logo" />
       <div class="status__menu">
-        <span>Finder</span>
+        <ul>
+          <li>Finder</li>
+          <li id="log-out">LogOut</li>
+        </ul>
         <h1 id="greeting" class="hidden"></h1>
         <h2 id="clock"></h2>
       </div>
@@ -49,7 +53,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="hidden">
       <nav>
         <ul>
           <li>
