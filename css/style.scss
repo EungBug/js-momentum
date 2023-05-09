@@ -219,6 +219,7 @@ main {
     }
 
     input {
+      width: 100%;
       outline: none;
       border: none;
       background-color: transparent;
@@ -235,7 +236,9 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: top;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
+      overflow-wrap: break-word;
+      word-break: break-all;
 
       .delete {
         background-color: transparent;

@@ -17,7 +17,6 @@ function onLoginSubmit(event) {
   if (loginInput.value.trim() === '') return;
   const username = loginInput.value;
   localStorage.setItem(USERNAEM_KEY, username);
-  loginForm.classList.add(HIDDEN_CLASSNAME);
   loginInput.value = '';
   paintGreetings(username);
 }
@@ -41,13 +40,13 @@ function showLoginForm() {
   desktop.classList.add(HIDDEN_CLASSNAME);
   footerEl.classList.add(HIDDEN_CLASSNAME);
   greeting.classList.add(HIDDEN_CLASSNAME);
+  // 버튼 클릭 이벤트 대신 form의 submit 이벤트를 감지
+  loginForm.addEventListener('submit', onLoginSubmit);
 }
 
 const savedUsername = localStorage.getItem(USERNAEM_KEY);
 if (savedUsername === null) {
   showLoginForm();
-  // 버튼 클릭 이벤트 대신 form의 submit 이벤트를 감지
-  loginForm.addEventListener('submit', onLoginSubmit);
 } else {
   paintGreetings(savedUsername);
 }
