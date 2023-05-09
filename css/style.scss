@@ -17,6 +17,11 @@ $color-green: #61c554;
   caret-color: $color-aqua;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 .hidden {
   display: none !important;
 }
@@ -202,6 +207,7 @@ main {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
   @include shadow;
 
   // Input
@@ -226,7 +232,20 @@ main {
     font-size: 14px;
 
     li {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
       margin-bottom: 4px;
+
+      .delete {
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        color: $color-red;
+        font-size: 16px;
+        cursor: pointer;
+      }
     }
   }
 }

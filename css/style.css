@@ -3,6 +3,11 @@
   caret-color: #0a84ff;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 .hidden {
   display: none !important;
 }
@@ -130,6 +135,7 @@ main.login {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .todo #todo-form {
@@ -150,7 +156,19 @@ main.login {
   font-size: 14px;
 }
 .todo #todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
   margin-bottom: 4px;
+}
+.todo #todo-list li .delete {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  color: #ed6a5f;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .title-bar {
