@@ -44,7 +44,6 @@ function showLoginForm() {
 }
 
 const savedUsername = localStorage.getItem(USERNAEM_KEY);
-console.log(savedUsername);
 if (savedUsername === null) {
   showLoginForm();
   // 버튼 클릭 이벤트 대신 form의 submit 이벤트를 감지

@@ -261,8 +261,8 @@ main {
   right: 0px;
   padding: 16px;
   border-radius: 4px 0 0 4px;
-  background-color: rgba(#000, 0.05);
-  backdrop-filter: blur(2px);
+  background-color: rgba(#fff, 0.05);
+  backdrop-filter: blur(1px);
 
   #quote {
     display: flex;

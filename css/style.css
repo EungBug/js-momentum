@@ -212,8 +212,8 @@ main.login {
   right: 0px;
   padding: 16px;
   border-radius: 4px 0 0 4px;
-  background-color: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(1px);
 }
 .widget #quote {
   display: flex;
