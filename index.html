@@ -41,10 +41,25 @@
             </div>
             <span class="title-bar__title">Today's ToDo</span>
           </div>
-          <form id="todo-form">
+          <form id="todo-form" class="window-form">
             <input type="text" placeholder="Enter Today's ToDo >" />
           </form>
-          <ul id="todo-list"></ul>
+          <ul id="todo-list" class="window-list"></ul>
+        </div>
+
+        <div class="til">
+          <div class="title-bar">
+            <div class="title-bar__btns">
+              <div class="btns__btn red"></div>
+              <div class="btns__btn yellow"></div>
+              <div class="btns__btn green"></div>
+            </div>
+            <span class="title-bar__title">TIL</span>
+          </div>
+          <form id="til-form" class="window-form">
+            <input type="text" placeholder="Enter Today I Learned! >" />
+          </form>
+          <ul id="til-list" class="window-list"></ul>
         </div>
 
         <div class="widget">
@@ -102,5 +117,6 @@
     <script src="/js/quotes.js"></script>
     <script src="/js/background.js"></script>
     <script src="/js/todo.js"></script>
+    <script src="/js/til.js"></script>
   </body>
 </html>

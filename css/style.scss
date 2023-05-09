@@ -38,6 +38,47 @@ button {
   background-color: $color-green;
 }
 
+.window-form {
+  padding: 10px 10px;
+
+  span {
+    color: $color-white;
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: $color-white;
+  }
+}
+
+.window-list {
+  padding: 10px;
+  color: $color-font;
+  font-size: 14px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+
+    .delete {
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      padding: 2px;
+      color: $color-red;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
 @mixin title-bar {
   position: relative;
   display: flex;
@@ -209,48 +250,21 @@ main {
   flex-direction: column;
   z-index: 3;
   @include shadow;
+}
 
-  // Input
-  #todo-form {
-    padding: 10px 10px;
-
-    span {
-      color: $color-white;
-    }
-
-    input {
-      width: 100%;
-      outline: none;
-      border: none;
-      background-color: transparent;
-      color: $color-white;
-    }
-  }
-
-  #todo-list {
-    padding: 10px;
-    color: $color-font;
-    font-size: 14px;
-
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: top;
-      margin-bottom: 10px;
-      overflow-wrap: break-word;
-      word-break: break-all;
-
-      .delete {
-        background-color: transparent;
-        width: 20px;
-        height: 20px;
-        padding: 2px;
-        color: $color-red;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    }
-  }
+.til {
+  position: absolute;
+  top: 50px;
+  left: 353px;
+  width: 250px;
+  min-height: 300px;
+  min-height: 400px;
+  background-color: $color-section-dark;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  @include shadow;
 }
 
 .title-bar {

@@ -35,6 +35,7 @@ function paintToDo(newTodo) {
 
 function handleToDoSubmit(event) {
   event.preventDefault();
+  if (todoInput.value.trim() === '') return;
   const newTodo = todoInput.value;
   todoInput.value = '';
   const newTodoObj = {

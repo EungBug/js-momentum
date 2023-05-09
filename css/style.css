@@ -24,6 +24,43 @@ button {
   background-color: #61c554;
 }
 
+.window-form {
+  padding: 10px 10px;
+}
+.window-form span {
+  color: #fff;
+}
+.window-form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.window-list {
+  padding: 10px;
+  color: #dfdedf;
+  font-size: 14px;
+}
+.window-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+.window-list li .delete {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  color: #ed6a5f;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -138,40 +175,20 @@ main.login {
   z-index: 3;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.todo #todo-form {
-  padding: 10px 10px;
-}
-.todo #todo-form span {
-  color: #fff;
-}
-.todo #todo-form input {
-  width: 100%;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  color: #fff;
-}
-.todo #todo-list {
-  padding: 10px;
-  color: #dfdedf;
-  font-size: 14px;
-}
-.todo #todo-list li {
+
+.til {
+  position: absolute;
+  top: 50px;
+  left: 353px;
+  width: 250px;
+  min-height: 300px;
+  min-height: 400px;
+  background-color: #282828;
+  border-radius: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: top;
-  margin-bottom: 10px;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-.todo #todo-list li .delete {
-  background-color: transparent;
-  width: 20px;
-  height: 20px;
-  padding: 2px;
-  color: #ed6a5f;
-  font-size: 16px;
-  cursor: pointer;
+  flex-direction: column;
+  z-index: 3;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .title-bar {
