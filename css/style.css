@@ -57,6 +57,18 @@ header .status__menu {
   justify-content: space-between;
   padding-top: 3px;
 }
+header .status__menu span {
+  min-width: 160px;
+}
+header .status__menu #greeting {
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}
+header .status__menu #clock {
+  min-width: 160px;
+  text-align: right;
+}
 
 main {
   width: 100%;
@@ -167,25 +179,32 @@ main.login {
   text-align: center;
 }
 
-#quote {
+.widget {
+  position: absolute;
+  height: 80%;
+  top: 24px;
+  right: 0px;
+  padding: 16px;
+  border-radius: 4px 0 0 4px;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(2px);
+}
+.widget #quote {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #1e1e1e;
   color: #fff;
   width: 300px;
-  height: 155px;
+  height: 125px;
   border-radius: 21px;
   padding: 20px;
-  position: absolute;
-  top: 50px;
-  right: 33px;
 }
-#quote span:first-child {
-  font-size: 16px;
+.widget #quote span:first-child {
+  font-size: 14px;
   font-weight: 700;
 }
-#quote span:last-child {
+.widget #quote span:last-child {
   font-size: 12px;
   color: #0a84ff;
   align-self: end;
