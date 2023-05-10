@@ -244,7 +244,7 @@ main.login {
   background-color: #1e1e1e;
   color: #fff;
   border-radius: 21px;
-  padding: 20px;
+  padding: 14px;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .widget #quote span:first-child {
@@ -255,6 +255,39 @@ main.login {
   font-size: 12px;
   color: #0a84ff;
   align-self: end;
+}
+.widget #weather {
+  margin-top: 20px;
+  width: 155px;
+  height: 155px;
+  color: #fff;
+  background: linear-gradient(180deg, #3eaede 0%, #1c86b4 100%);
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 21px;
+  padding: 14px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.widget #weather p.weather__city {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.widget #weather p.weather__temp {
+  font-size: 45px;
+  font-weight: 200;
+  line-height: 54px;
+}
+.widget #weather img.weather__icon {
+  margin-top: 9px;
+  width: 24px;
+  height: 24px;
+}
+.widget #weather p.weather__info {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.5px;
 }
 
 footer {
